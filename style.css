@@ -1,0 +1,106 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+  }
+  
+  /* Navigation bar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;
+    color: white;
+    padding: 15px 30px;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  /* Main content using CSS Grid */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 30px;
+  }
+  
+  .content {
+    grid-column: span 2;
+    background-color: #ecf0f1;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .box {
+    background-color: #dfe6e9;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  /* Footer */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #34495e;
+    color: white;
+    margin-top: 30px;
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .content {
+      grid-column: span 1;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .logo {
+      font-size: 20px;
+    }
+  
+    .content {
+      font-size: 16px;
+    }
+  
+    .box {
+      font-size: 14px;
+    }
+  }
+  
